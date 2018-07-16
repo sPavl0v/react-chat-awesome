@@ -1,0 +1,21 @@
+{
+  "name": "react-chat-awesome",
+  "version": "1.0.0",
+  "description": "Configurable react chat widget",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "author": "sPavl0v",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
