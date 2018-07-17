@@ -7,10 +7,32 @@
     "build": "babel src -d build"
   },
   "author": "sPavl0v",
-  "license": "ISC",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "chat",
+    "chat-ui",
+    "reactjs",
+    "react-chat-awesome",
+    "react-component",
+    "chat-component",
+    "react-chat",
+    "react-widget",
+    "react-chat-component",
+    "chat-widget",
+    "react-chat-widget",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/sPavl0v/react-chat-awesome/issues"
+  },
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sPavl0v/react-chat-awesome.git"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

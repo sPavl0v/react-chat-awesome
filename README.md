@@ -2,7 +2,7 @@
 
 ### Fully configurable and customizable chat component for your React applications. 
 
-## Features
+## Advantages
 
 - 100% Customizable
 - Props for styles customization
@@ -43,8 +43,6 @@ yarn add react-chat-awesome --save
 import React, { Component } from 'react'
 import { ChatAwesome } from 'react-chat-awesome'
 
-
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -68,8 +66,8 @@ export default class App extends Component {
   onSendMessageClick(text) {
     this.setState({ history: [...this.state.history, {
       id: +new Date(),
-      text: msg,
-      userID: 1
+      text,
+      userID: this.sender.id
     }]})
   }
 
@@ -91,6 +89,7 @@ export default class App extends Component {
 ## API
 
 `ChatAwesome` is the only component you need to import.
+* - required prop
 
 ChatAwesome props:
 
@@ -99,7 +98,21 @@ ChatAwesome props:
 | *sender | object | person who interacts with the UI and types the message.|
 | *receiver | object | person who receives the messages and send responses to sender |
 | history | message[] | array of messages |
-
+| onSendMessageClick | function | callback function, executes when user send the message |
+| onMessageChange | function | callback function, executes when user type something |
+| onChatClose | function | callback on close button click |
+| onChatOpen | function | callback on open button click |
+| isOpen | boolean | programatically close/open chat (default false)
+| showReceiverImageOnMessage | boolean | set if image should be displayed near each receiver message |
+| sendMessageIcon | string | url for alternative icon |
+| wrapperStyles | object | |
+| headerStyles | object | styles for chat header |
+| sendButtonStyles | object | styles for send button(not icon) |
+| bodyStyles | object | styles for messages wrapper |
+| footerStyles | object | styles for wrapper of the input field and chat button
+| inputStyles | object | styles for input field |
+| closedChatStyles | object | styles for closed chat button
+| headerNameStyles | object | styles for receiver name at the header
 
 ## Interfaces
 

@@ -347,7 +347,7 @@ ChatAwesome.propTypes = {
   onChatClose: PropTypes.func,
   onChatOpen: PropTypes.func,
   showReceiverImageOnMessage: PropTypes.bool,
-  sendMessageIcon: PropTypes.element,
+  sendMessageIcon: PropTypes.string,
   // messageMaxLen: PropTypes.number, // TODO: Implement it later
 
   // styles
