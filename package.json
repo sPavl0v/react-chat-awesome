@@ -1,6 +1,6 @@
 {
   "name": "react-chat-awesome",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Configurable react chat widget",
   "main": "build/index.js",
   "scripts": {
