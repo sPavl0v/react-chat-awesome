@@ -287,12 +287,12 @@ class ChatAwesome extends Component {
             ref={ ref => { this.messageWrapper = ref } }
           >
             { history.map(message => {
-              const { text, id, userID } = message;
+              const { msg, id, userID } = message;
 
               return (
                 <Message
                   key={ id }
-                  text={ text }
+                  text={ msg.text }
                   receiver={ receiver }
                   showReceiverImageOnMessage={ showReceiverImageOnMessage }
                   isSender={ userID === sender.id }

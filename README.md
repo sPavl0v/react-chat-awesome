@@ -59,14 +59,15 @@ export default class App extends Component {
       id: 2,
       imageUrl: 'path/to/source'
     }
-
-    this.onSendMessageClick = this.onSendMessageClick.bind(this);
   }
 
-  onSendMessageClick(text) {
+  onSendMessageClick = (msgText) => {
     this.setState({ history: [...this.state.history, {
       id: +new Date(),
-      text,
+      msg: {
+        type: 'text'
+        text: msgText
+      },
       userID: this.sender.id
     }]})
   }
@@ -89,7 +90,7 @@ export default class App extends Component {
 ## API
 
 `ChatAwesome` is the only component you need to import.
-* - required prop
+`*` - required prop
 
 ChatAwesome props:
 
@@ -119,21 +120,25 @@ ChatAwesome props:
 ### Sender
 ``` javascript
 {
-  id: number | string, // required
+  id: number | string; // required
 }
 ```
 
 ### Receiver
 ``` javascript
 {
-  id: number | string, // required 
-  imageUrl: string
+  id: number | string; // required 
+  imageUrl: string;
 }
 ```
 ### Message
 ``` javascript
 {
-  id: number | string
-
+  id: number | string;
+  userID: number | string;
+  msg: {
+    type: string;
+    text: string;
+  }
 }
 ```
