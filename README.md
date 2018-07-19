@@ -51,21 +51,17 @@ export default class App extends Component {
       history: []
     }
 
-    this.sender = {
-      id: 1
-    }
+    this.sender = { id: 1 };
+    this.receiver = { id: 2, imageUrl: 'path/to/source' };
 
-    this.receiver = {
-      id: 2,
-      imageUrl: 'path/to/source'
-    }
+    this.onSendMessageClick = this.onSendMessageClick.bind(this);
   }
 
-  onSendMessageClick = (msgText) => {
+  onSendMessageClick(msgText) {
     this.setState({ history: [...this.state.history, {
       id: +new Date(),
       msg: {
-        type: 'text'
+        type: 'text',
         text: msgText
       },
       userID: this.sender.id

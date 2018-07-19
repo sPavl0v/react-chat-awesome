@@ -118,6 +118,8 @@ class ChatAwesome extends Component {
     this.toggleChatView = this.toggleChatView.bind(this);
     this.displayUsername = this.displayUsername.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
+    this.onChatClose = this.onChatClose.bind(this);
+    this.onChatOpen = this.onChatOpen.bind(this);
   }
 
   handleKey(e) {
@@ -127,16 +129,30 @@ class ChatAwesome extends Component {
     }
   }
 
-  toggleChatView(isOpen) {
-    const { onChatClose, onChatOpen } = this.props;
-    
+  toggleChatView(isOpen) {    
     if (isOpen) {
-      onChatOpen();
+      this.onChatOpen();
     } else {
-      onChatClose();
+      this.onChatClose();
     }
 
     this.setState({ isOpen: !this.state.isOpen });
+  }
+
+  onChatOpen() {
+    const { onChatOpen } = this.props;
+    
+    if (onChatOpen) {
+      onChatOpen();
+    }
+  }
+
+  onChatClose() {
+    const { onChatClose } = this.props;
+    
+    if (onChatClose) {
+      onChatClose();
+    }
   }
 
   // TODO: Move to utils
